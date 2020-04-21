@@ -44,12 +44,12 @@
         created(){
             this.getMenu()
         },
-        beforeCreate() {
-            const token = localStorage.getItem('token')
-            if(!token){
-                this.$router.push({name:'login'})
-            }
-        },
+        // beforeCreate() {
+        //     const token = localStorage.getItem('token')
+        //     if(!token){
+        //         this.$router.push({name:'login'})
+        //     }
+        // },
         methods:{
             async getMenu(){
                 const res = await this.$http.get(`menus`)
