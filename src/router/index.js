@@ -10,6 +10,7 @@ import Params from '../components/goodlist/Params'
 import Cate from "../components/goodlist/Cate";
 import Order from '../components/order/Order'
 import Report from "../components/report/Report";
+import Add from "../components/goodlist/Add"
 
 Vue.use(Router)
  const router = new Router({
@@ -52,6 +53,11 @@ Vue.use(Router)
           component:List
         },
         {
+          name:'add',
+          path: '/add',
+          component: Add
+        },
+        {
           name:'params',
           path:'/params',
           component:Params
@@ -71,6 +77,7 @@ Vue.use(Router)
           path:'/reports',
           component:Report
         },
+
       ]
     }
   ],

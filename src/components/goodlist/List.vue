@@ -18,7 +18,7 @@
           <el-button type="primary" @click="goAddPage">添加商品</el-button>
         </el-col>
       </el-row>
-      <el-table :data="goodsList" border stripe>
+      <el-table :data="goodsList" border stripe class="list">
         <el-table-column type="index"></el-table-column>
         <el-table-column label="商品名称" prop="goods_name"></el-table-column>
         <el-table-column label="商品价格(元)" prop="goods_price" width="100px"></el-table-column>
@@ -110,7 +110,7 @@ export default {
       this.getGoodsList()
     },
     goAddPage () {
-      this.$router.push('/goods/add')
+      this.$router.push({name:'add'})
     }
   }
 }

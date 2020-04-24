@@ -1,10 +1,6 @@
 <template>
   <el-card class="box-card">
-    <el-breadcrumb separator="/">
-      <el-breadcrumb-item>首页</el-breadcrumb-item>
-      <el-breadcrumb-item>用户列表</el-breadcrumb-item>
-      <el-breadcrumb-item>用户管理</el-breadcrumb-item>
-    </el-breadcrumb>
+    <my-bread level1="用户列表" level2="用户管理"></my-bread>
 
     <el-row>
       <el-col>
@@ -40,7 +36,7 @@
       <el-table-column
         label="创建时间">
         <template slot-scope="userlist">
-          {{userlist.row.create_time | fmtdate}}
+          {{userlist.row.create_time | dataFormat}}
         </template>
       </el-table-column>
 

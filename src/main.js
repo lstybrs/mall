@@ -9,8 +9,16 @@ import './assets/css/reset.css'
 import MyHttpServer from './plugins/http'
 import moment from 'moment'
 import MyBread from './components/cuscom/mybread'
+import TreeTable from 'vue-table-with-tree-grid'
+import VueQuillEditor from 'vue-quill-editor'
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 
-Vue.filter('fmtdate', function (originVal) {
+Vue.component('tree-table', TreeTable)
+Vue.use(VueQuillEditor)
+
+Vue.filter('dataFormat', function (originVal) {
   const dt = new Date(originVal)
 
   const y = dt.getFullYear()

@@ -7,7 +7,7 @@
         <el-breadcrumb-item>添加商品</el-breadcrumb-item>
       </el-breadcrumb>
       <!-- 提示 -->
-      <el-alert title="添加商品信息" type="info" center show-icon :closable="false"></el-alert>
+      <el-alert class="list" title="添加商品信息" type="info" center show-icon :closable="false"></el-alert>
       <!-- 步骤条 -->
       <el-steps :space="200" :active="activeIndex - 0" finish-status="success" align-center>
         <el-step title="基本信息"></el-step>
@@ -301,4 +301,7 @@ export default {
 .btnAdd{
   margin-top: 15px
 }
+  .list{
+    margin-top: 10px;
+  }
 </style>
